@@ -14,20 +14,7 @@ app.post("/signup",(req,res)=>{
     res.json("done")
 })
 
-app.post("/signin",(req,res)=>{
-    let input=req.body
-    ksrtcmodel.find({"email":req.body.email}).then(
-        (response)=>{
-            if (response.length>0) {
-                let dbpassword=response[0].password
-                console.log(password)
-                
-            } else {
-                
-            }
-        }
-    ).catch()
-})
+
 app.listen(8080,()=>{
     console.log("server started")
 })
